@@ -14,3 +14,4 @@ I specialize in building scalable data platforms, optimizing data pipelines, and
 - **DBT**
 - **Kafka**
 - **Superset**
+- **Oracle**
