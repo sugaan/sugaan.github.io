@@ -1,0 +1,10 @@
+title: Sugaan's Portfolio
+description: Data Platform Team Lead | Senior Data Engineer
+baseurl: "" # Base URL for your site. Keep it empty for GitHub Pages.
+url: "https://sugaan.github.io" # Your GitHub Pages URL.
+theme: jekyll-theme-indigo
+author:
+  name: Sugaan
+  email: your-email@example.com
+  description: >
+    I specialize in building scalable data platforms, optimizing data pipelines, and delivering insights.
