@@ -8,3 +8,13 @@ author:
   email: your-email@example.com
   description: >
     I specialize in building scalable data platforms, optimizing data pipelines, and delivering insights.
+
+plugins:
+    - jekyll-seo-tag
+    - jekyll-gist
+    - jekyll-feed
+    - jemoji
+    - jekyll-admin
+
+jekyll-mentions:
+    base_url: https://github.com
