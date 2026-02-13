@@ -1,50 +1,836 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sugaan K | Data Engineer</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 50px;
-      background: #f5f7fa;
-      color: #333;
-    }
-    h1 { margin-bottom: 5px; }
-    .section { margin-top: 40px; }
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sugaan - Data Platform Team Lead & Senior Data Engineer specializing in scalable data platforms, ETL pipelines, and full-stack development">
+    <title>Sugaan - Data Engineer & Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #3b82f6;
+            --dark-bg: #0f172a;
+            --darker-bg: #020617;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --accent-purple: #a855f7;
+            --accent-green: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header/Navigation */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: var(--dark-bg);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-purple));
+            border-radius: 2px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 5rem 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 0;
+            background: var(--dark-bg);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--primary-blue);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--accent-purple);
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 5rem 0;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary-blue);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            width: calc(50% - 40px);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: var(--dark-bg);
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card-bg);
+            border-radius: 50%;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-content {
+                width: 100%;
+                margin-left: 40px !important;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Sugaan</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h1>Sugaan K</h1>
-<p>Data Engineer | Python | SQL | Airflow</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Sugaan</h1>
+            <p class="hero-subtitle">Data Platform Team Lead | Senior Data Engineer</p>
+            <p class="hero-description">
+                Specializing in building scalable data platforms, optimizing ETL pipelines, and delivering data-driven insights. 
+                Full-stack developer with expertise in healthcare compliance systems, enterprise data integration, and cloud architecture.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View Projects
+                </a>
+                <a href="https://github.com/sugaan" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="section card">
-  <h2>About Me</h2>
-  <p>Data engineer focused on building scalable ETL pipelines and analytics systems.</p>
-</div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I'm a Senior Data Engineer based in Chennai, India, with deep expertise in designing and implementing 
+                    enterprise-scale data platforms. My work focuses on building robust ETL pipelines, ensuring data quality, 
+                    and creating systems that transform raw data into actionable insights.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    With a strong full-stack development background, I've successfully delivered healthcare compliance systems 
+                    (HEDIS), implemented Flatfile data integration platforms, and architected cloud-based data solutions. 
+                    I'm passionate about clean code, scalable architecture, and leveraging modern data engineering tools 
+                    like Snowflake, DBT, Kafka, and Superset.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Beyond technology, I'm an avid stock market analyst and investor, combining my data skills with 
+                    financial analysis for portfolio management and market research.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<div class="section card">
-  <h2>Projects</h2>
-  <ul>
-    <li>Airflow ETL Pipeline</li>
-    <li>SQL Data Warehouse</li>
-    <li>Python Automation Project</li>
-  </ul>
-</div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <ul class="skill-list">
+                        <li>Python (Pandas, NumPy)</li>
+                        <li>Snowflake & DBT</li>
+                        <li>Kafka & Stream Processing</li>
+                        <li>ETL/ELT Pipelines</li>
+                        <li>Data Modeling & Warehousing</li>
+                        <li>SQL (PostgreSQL, SQL Server)</li>
+                    </ul>
+                </div>
 
-<div class="section card">
-  <h2>Contact</h2>
-  <p>Email: yourmail@gmail.com</p>
-</div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Full-Stack Development</h3>
+                    <ul class="skill-list">
+                        <li>TypeScript & Node.js</li>
+                        <li>React & Next.js</li>
+                        <li>REST APIs & GraphQL</li>
+                        <li>JavaScript/ES6+</li>
+                        <li>Flatfile Platform Integration</li>
+                        <li>Healthcare Data Systems</li>
+                    </ul>
+                </div>
 
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & DevOps</h3>
+                    <ul class="skill-list">
+                        <li>Azure Cloud Platform</li>
+                        <li>Docker & Containerization</li>
+                        <li>Git & Version Control</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Azure Data Studio</li>
+                        <li>SSH & Remote Systems</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Analytics & Visualization</h3>
+                    <ul class="skill-list">
+                        <li>Superset Dashboards</li>
+                        <li>DuckDB Analytics</li>
+                        <li>Data Quality Assurance</li>
+                        <li>Business Intelligence</li>
+                        <li>Statistical Analysis</li>
+                        <li>Financial Data Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Modern Tools</h3>
+                    <ul class="skill-list">
+                        <li>LangChain & LLM Integration</li>
+                        <li>Databricks Platform</li>
+                        <li>AI Agent Development</li>
+                        <li>Perplexity API</li>
+                        <li>Machine Learning Basics</li>
+                        <li>Data-Driven Automation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Healthcare & Compliance</h3>
+                    <ul class="skill-list">
+                        <li>HEDIS Quality Measures</li>
+                        <li>Healthcare Data Standards</li>
+                        <li>Compliance Validation</li>
+                        <li>Data Governance</li>
+                        <li>Reveleer Platform</li>
+                        <li>Medical Data Processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>HEDIS Healthcare Compliance System</h3>
+                    <p class="project-description">
+                        Full-stack healthcare data validation system at Reveleer ensuring compliance with HEDIS quality measures. 
+                        Built comprehensive validation rules, automated quality checks, and real-time data processing pipelines.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Healthcare Data</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Flatfile Enterprise Data Integration</h3>
+                    <p class="project-description">
+                        Implemented enterprise data integration platform with custom validation rules, data transformation logic, 
+                        and ETL pipeline architecture. Streamlined data onboarding for multiple healthcare clients.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flatfile</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Stock Market Analysis & Portfolio Manager</h3>
+                    <p class="project-description">
+                        Financial analysis platform for portfolio management combining real-time stock data, technical indicators, 
+                        and custom analytics. Automated data collection and visualization for investment decision-making.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Financial APIs</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Scalable ETL Data Pipeline</h3>
+                    <p class="project-description">
+                        Architected and deployed cloud-based ETL pipelines for processing healthcare data with automated quality 
+                        checks, error handling, and monitoring. Achieved 99.9% uptime with comprehensive logging.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Data Quality</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Data Analytics Dashboard (Superset)</h3>
+                    <p class="project-description">
+                        Built interactive business intelligence dashboards using Apache Superset for real-time data visualization, 
+                        KPI tracking, and executive reporting across multiple data sources.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Superset</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Viz</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>AI-Powered Data Agent</h3>
+                    <p class="project-description">
+                        Developed AI agent using LangChain and Perplexity API for automated data analysis, natural language 
+                        querying, and intelligent insights generation from complex datasets.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Perplexity API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Platform Team Lead</h3>
+                        <h4>Reveleer | Senior Data Engineer</h4>
+                        <p>
+                            Leading data platform initiatives, architecting scalable data pipelines, and mentoring engineering teams. 
+                            Responsible for HEDIS compliance systems, Flatfile integration, and enterprise data quality frameworks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Engineer</h3>
+                        <h4>Previous Role</h4>
+                        <p>
+                            Built ETL pipelines, implemented data warehousing solutions, and developed full-stack applications 
+                            for data integration. Worked extensively with SQL Server, PostgreSQL, and cloud platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Full-Stack Developer</h3>
+                        <h4>Early Career</h4>
+                        <p>
+                            Developed web applications using TypeScript, Node.js, and React. Focused on building scalable 
+                            backend systems, REST APIs, and database design for enterprise applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                Interested in collaborating or discussing data engineering, full-stack development, or stock market analysis? 
+                Feel free to reach out!
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/sugaan" class="social-link" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sugaan" class="social-link" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:sugaan@example.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://twitter.com/sugaan" class="social-link" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sugaan. Built with passion for data engineering and clean code.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Chennai, Tamil Nadu, India | <a href="mailto:sugaan@example.com" style="color: var(--primary-blue);">sugaan@example.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .project-card, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
