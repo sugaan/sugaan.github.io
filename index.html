@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sugaan - Data Platform Team Lead & Senior Data Engineer specializing in scalable data platforms, ETL pipelines, and full-stack development">
-    <title>Sugaan - Data Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Sugaan K - Lead Data Integration Engineer with 14+ years of experience in scalable data platforms, ETL pipelines, and cloud architecture">
+    <title>Sugaan K - Lead Data Integration Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary-blue: #3b82f6;
@@ -32,13 +28,8 @@
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* Header/Navigation */
         header {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -50,35 +41,14 @@
             border-bottom: 1px solid rgba(59, 130, 246, 0.2);
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-blue); }
 
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-blue);
-        }
-
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -105,10 +75,7 @@
             50% { transform: scale(1.1); opacity: 0.7; }
         }
 
-        .hero-content {
-            text-align: center;
-            z-index: 1;
-        }
+        .hero-content { text-align: center; z-index: 1; }
 
         .hero-title {
             font-size: 3.5rem;
@@ -120,11 +87,7 @@
             background-clip: text;
         }
 
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
+        .hero-subtitle { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem; }
 
         .hero-description {
             font-size: 1.1rem;
@@ -134,12 +97,7 @@
             line-height: 1.8;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         .btn {
             padding: 0.9rem 2rem;
@@ -154,33 +112,32 @@
             cursor: pointer;
         }
 
-        .btn-primary {
-            background: var(--primary-blue);
-            color: white;
-        }
+        .btn-primary { background: var(--primary-blue); color: white; }
+        .btn-primary:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3); }
 
-        .btn-primary:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-        }
+        .btn-secondary { background: var(--card-bg); color: var(--text-primary); border: 1px solid var(--primary-blue); }
+        .btn-secondary:hover { background: var(--primary-blue); transform: translateY(-2px); }
 
-        .btn-secondary {
-            background: var(--card-bg);
-            color: var(--text-primary);
-            border: 1px solid var(--primary-blue);
+        /* Badges */
+        .badges { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .badge-item {
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--accent-purple);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
         }
+        .badge-item:hover { background: rgba(168, 85, 247, 0.3); transform: translateY(-2px); }
 
-        .btn-secondary:hover {
-            background: var(--primary-blue);
-            transform: translateY(-2px);
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 0;
-            background: var(--dark-bg);
-        }
+        /* About */
+        .about { padding: 5rem 0; background: var(--dark-bg); }
 
         .section-title {
             font-size: 2.5rem;
@@ -210,10 +167,27 @@
             line-height: 1.9;
         }
 
-        /* Skills Section */
-        .skills {
-            padding: 5rem 0;
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            max-width: 800px;
+            margin: 3rem auto 0;
         }
+
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--primary-blue); }
+        .stat-label { font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.25rem; }
+
+        /* Skills */
+        .skills { padding: 5rem 0; }
 
         .skills-grid {
             display: grid;
@@ -236,41 +210,15 @@
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
         }
 
-        .skill-icon {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
+        .skill-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 1rem; }
+        .skill-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary); }
 
-        .skill-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
+        .skill-list { list-style: none; }
+        .skill-list li { color: var(--text-secondary); padding: 0.4rem 0; display: flex; align-items: center; gap: 0.5rem; }
+        .skill-list li::before { content: '▹'; color: var(--primary-blue); font-weight: bold; }
 
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            color: var(--text-secondary);
-            padding: 0.4rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-list li::before {
-            content: '▹';
-            color: var(--primary-blue);
-            font-weight: bold;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 5rem 0;
-            background: var(--dark-bg);
-        }
+        /* Projects */
+        .projects { padding: 5rem 0; background: var(--dark-bg); }
 
         .projects-grid {
             display: grid;
@@ -285,6 +233,8 @@
             padding: 2rem;
             border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -293,25 +243,10 @@
             box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
         }
 
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
+        .project-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-primary); }
+        .project-description { color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7; flex-grow: 1; }
 
-        .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
         .tech-tag {
             background: rgba(59, 130, 246, 0.2);
             color: var(--primary-blue);
@@ -321,11 +256,7 @@
             font-weight: 500;
         }
 
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
+        .project-links { display: flex; gap: 1rem; }
         .project-link {
             color: var(--primary-blue);
             text-decoration: none;
@@ -335,21 +266,12 @@
             font-size: 0.9rem;
             transition: color 0.3s;
         }
+        .project-link:hover { color: var(--accent-purple); }
 
-        .project-link:hover {
-            color: var(--accent-purple);
-        }
+        /* Experience */
+        .experience { padding: 5rem 0; }
 
-        /* Experience Section */
-        .experience {
-            padding: 5rem 0;
-        }
-
-        .timeline {
-            max-width: 800px;
-            margin: 3rem auto;
-            position: relative;
-        }
+        .timeline { max-width: 900px; margin: 3rem auto; position: relative; }
 
         .timeline::before {
             content: '';
@@ -361,9 +283,18 @@
             background: var(--primary-blue);
         }
 
-        .timeline-item {
-            margin-bottom: 3rem;
-            position: relative;
+        .timeline-item { margin-bottom: 3rem; position: relative; }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            top: 1.5rem;
+            z-index: 1;
         }
 
         .timeline-content {
@@ -373,40 +304,81 @@
             border: 1px solid rgba(59, 130, 246, 0.2);
             width: calc(50% - 40px);
             position: relative;
+            transition: all 0.3s;
         }
 
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
+        .timeline-content:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.15);
         }
 
-        .timeline-content h3 {
+        .timeline-item:nth-child(even) .timeline-content { margin-left: auto; }
+
+        .timeline-content .company { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.3rem; }
+        .timeline-content .period {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
             color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content h4 {
-            color: var(--text-primary);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             margin-bottom: 1rem;
         }
 
-        .timeline-content p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
+        .timeline-content h3 { color: var(--primary-blue); margin-bottom: 0.3rem; font-size: 1.1rem; }
+        .timeline-content h4 { color: var(--text-primary); margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .timeline-content ul { list-style: none; padding: 0; }
+        .timeline-content ul li { color: var(--text-secondary); padding: 0.3rem 0; line-height: 1.6; font-size: 0.9rem; display: flex; gap: 0.5rem; }
+        .timeline-content ul li::before { content: '▹'; color: var(--primary-blue); flex-shrink: 0; margin-top: 0.1rem; }
 
-        /* Contact Section */
-        .contact {
-            padding: 5rem 0;
-            background: var(--dark-bg);
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
+        /* Achievements */
+        .achievements { padding: 5rem 0; background: var(--dark-bg); }
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
+
+        .achievement-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+        .achievement-card:hover { border-color: var(--accent-green); transform: translateY(-3px); }
+        .achievement-icon { font-size: 1.8rem; color: var(--accent-green); flex-shrink: 0; }
+        .achievement-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+        .achievement-card strong { color: var(--text-primary); }
+
+        /* Certifications */
+        .certifications { padding: 5rem 0; }
+        .cert-grid { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 3rem; }
+        .cert-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            text-align: center;
+            max-width: 300px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+        }
+        .cert-card:hover { border-color: var(--accent-purple); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2); }
+        .cert-icon { font-size: 3rem; color: var(--accent-purple); margin-bottom: 1rem; }
+        .cert-card h3 { color: var(--text-primary); margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .cert-card p { color: var(--text-secondary); font-size: 0.9rem; }
+        .cert-verify { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--accent-purple); font-size: 0.85rem; margin-top: 1rem; }
+
+        /* Contact */
+        .contact { padding: 5rem 0; background: var(--dark-bg); text-align: center; }
+
+        .social-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem; }
 
         .social-link {
             width: 60px;
@@ -420,15 +392,11 @@
             font-size: 1.5rem;
             transition: all 0.3s;
             border: 1px solid rgba(59, 130, 246, 0.2);
+            text-decoration: none;
         }
 
-        .social-link:hover {
-            background: var(--primary-blue);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-        }
+        .social-link:hover { background: var(--primary-blue); transform: translateY(-5px); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3); }
 
-        /* Footer */
         footer {
             background: var(--darker-bg);
             padding: 2rem 0;
@@ -437,60 +405,32 @@
             border-top: 1px solid rgba(59, 130, 246, 0.2);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-content {
-                width: 100%;
-                margin-left: 40px !important;
-            }
-
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.2rem; }
+            .nav-links { gap: 1rem; }
+            .timeline::before { left: 20px; }
+            .timeline-dot { left: 20px; }
+            .timeline-content { width: calc(100% - 60px); margin-left: 60px !important; }
+            .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+            .stats-bar { gap: 1.5rem; }
         }
 
-        /* Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s ease forwards; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">Sugaan</div>
+            <div class="logo">Sugaan K</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -499,21 +439,27 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Sugaan</h1>
-            <p class="hero-subtitle">Data Platform Team Lead | Senior Data Engineer</p>
+            <h1 class="hero-title">Sugaan K</h1>
+            <p class="hero-subtitle">Lead Data Integration Engineer</p>
             <p class="hero-description">
-                Specializing in building scalable data platforms, optimizing ETL pipelines, and delivering data-driven insights. 
-                Full-stack developer with expertise in healthcare compliance systems, enterprise data integration, and cloud architecture.
+                14+ years of experience building scalable data platforms across startups and global enterprises.
+                Specializing in cloud data architecture, real-time streaming pipelines, and Data Mesh design —
+                with hands-on leadership from IKEA and BYJU'S to IMMO Digital and Reveleer.
             </p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">
                     <i class="fas fa-code"></i> View Projects
                 </a>
                 <a href="https://github.com/sugaan" class="btn btn-secondary" target="_blank">
-                    <i class="fab fa-github"></i> GitHub Profile
+                    <i class="fab fa-github"></i> GitHub
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+            </div>
+            <div class="badges">
+                <a href="https://www.credly.com/badges/fdd30a94-c1a4-4b8d-b7d6-2b8869945a61/linked_in?t=tabzsk" target="_blank" class="badge-item">
+                    <i class="fas fa-certificate"></i> Credly Certified — View Badge
                 </a>
             </div>
         </div>
@@ -525,20 +471,38 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>
-                    I'm a Senior Data Engineer based in Chennai, India, with deep expertise in designing and implementing 
-                    enterprise-scale data platforms. My work focuses on building robust ETL pipelines, ensuring data quality, 
-                    and creating systems that transform raw data into actionable insights.
+                    I'm a Lead Data Integration Engineer based in Chennai, India, passionate about creating scalable data solutions
+                    with 14 years of experience across individual contributor and team lead roles. My background spans global
+                    organizations in Europe and India, delivering innovative solutions to complex data challenges.
                 </p>
                 <p style="margin-top: 1.5rem;">
-                    With a strong full-stack development background, I've successfully delivered healthcare compliance systems 
-                    (HEDIS), implemented Flatfile data integration platforms, and architected cloud-based data solutions. 
-                    I'm passionate about clean code, scalable architecture, and leveraging modern data engineering tools 
-                    like Snowflake, DBT, Kafka, and Superset.
+                    Currently at Reveleer, I design ETL/ELT pipelines using DBT, Apache Airflow, and Snowflake in a healthcare
+                    big data environment, enforcing data modeling standards and CI/CD practices. Previously at IMMO Digital Solutions,
+                    I led a team of 6 Senior Engineers building a Data Mesh platform with real-time Kafka streaming and Snowflake
+                    from the ground up using Terraform.
                 </p>
                 <p style="margin-top: 1.5rem;">
-                    Beyond technology, I'm an avid stock market analyst and investor, combining my data skills with 
-                    financial analysis for portfolio management and market research.
+                    Beyond my day job, I actively build open-source data tools — including NSE stock analytics and
+                    a full lakehouse architecture — and enjoy combining data engineering with financial market analysis.
                 </p>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Engineers Led</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
             </div>
         </div>
     </section>
@@ -552,77 +516,77 @@
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Data Engineering</h3>
                     <ul class="skill-list">
-                        <li>Python (Pandas, NumPy)</li>
-                        <li>Snowflake & DBT</li>
-                        <li>Kafka & Stream Processing</li>
-                        <li>ETL/ELT Pipelines</li>
+                        <li>Snowflake (Streams, Tasks, Materialized Views)</li>
+                        <li>DBT — transformations & testing</li>
+                        <li>Apache Airflow orchestration</li>
+                        <li>ETL/ELT pipeline design</li>
                         <li>Data Modeling & Warehousing</li>
-                        <li>SQL (PostgreSQL, SQL Server)</li>
+                        <li>Google BigQuery</li>
                     </ul>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Full-Stack Development</h3>
+                    <div class="skill-icon"><i class="fas fa-stream"></i></div>
+                    <h3>Streaming & Messaging</h3>
                     <ul class="skill-list">
-                        <li>TypeScript & Node.js</li>
-                        <li>React & Next.js</li>
-                        <li>REST APIs & GraphQL</li>
-                        <li>JavaScript/ES6+</li>
-                        <li>Flatfile Platform Integration</li>
-                        <li>Healthcare Data Systems</li>
+                        <li>Kafka / Amazon MSK</li>
+                        <li>RabbitMQ</li>
+                        <li>Real-time event processing</li>
+                        <li>MSK Connectors for Snowflake</li>
+                        <li>Data contracts & topic access control</li>
+                        <li>Data Mesh architecture</li>
                     </ul>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud & DevOps</h3>
+                    <h3>Cloud & Infrastructure</h3>
                     <ul class="skill-list">
+                        <li>Terraform (IaC)</li>
+                        <li>GitHub Actions CI/CD</li>
+                        <li>Docker & containerization</li>
                         <li>Azure Cloud Platform</li>
-                        <li>Docker & Containerization</li>
-                        <li>Git & Version Control</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>Azure Data Studio</li>
-                        <li>SSH & Remote Systems</li>
+                        <li>SSH & remote systems</li>
+                        <li>Infrastructure as Code principles</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages & Databases</h3>
+                    <ul class="skill-list">
+                        <li>Python (Pandas, NumPy)</li>
+                        <li>SQL / PL-SQL</li>
+                        <li>PostgreSQL & SQL Server</li>
+                        <li>MongoDB</li>
+                        <li>Oracle</li>
+                        <li>TypeScript / JavaScript</li>
                     </ul>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Data Analytics & Visualization</h3>
+                    <h3>Analytics & Visualization</h3>
                     <ul class="skill-list">
-                        <li>Superset Dashboards</li>
-                        <li>DuckDB Analytics</li>
-                        <li>Data Quality Assurance</li>
+                        <li>Apache Superset dashboards</li>
+                        <li>Tableau integration</li>
+                        <li>DuckDB analytics</li>
                         <li>Business Intelligence</li>
-                        <li>Statistical Analysis</li>
-                        <li>Financial Data Analysis</li>
+                        <li>Financial data analysis (NSE/BSE)</li>
+                        <li>Data quality assurance</li>
                     </ul>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI & Modern Tools</h3>
+                    <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Leadership & Practices</h3>
                     <ul class="skill-list">
-                        <li>LangChain & LLM Integration</li>
-                        <li>Databricks Platform</li>
-                        <li>AI Agent Development</li>
-                        <li>Perplexity API</li>
-                        <li>Machine Learning Basics</li>
-                        <li>Data-Driven Automation</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Healthcare & Compliance</h3>
-                    <ul class="skill-list">
-                        <li>HEDIS Quality Measures</li>
-                        <li>Healthcare Data Standards</li>
-                        <li>Compliance Validation</li>
-                        <li>Data Governance</li>
-                        <li>Reveleer Platform</li>
-                        <li>Medical Data Processing</li>
+                        <li>Team Lead — 6 Senior Engineers</li>
+                        <li>Engineering Manager at BYJU'S</li>
+                        <li>Agile / TDD development</li>
+                        <li>System design (HLD & LLD)</li>
+                        <li>OKR definition & ownership</li>
+                        <li>Pair programming & mentoring</li>
                     </ul>
                 </div>
             </div>
@@ -634,91 +598,112 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
+
                 <div class="project-card">
-                    <h3>HEDIS Healthcare Compliance System</h3>
+                    <h3>🏗️ Lakehouse Architecture</h3>
                     <p class="project-description">
-                        Full-stack healthcare data validation system at Reveleer ensuring compliance with HEDIS quality measures. 
-                        Built comprehensive validation rules, automated quality checks, and real-time data processing pipelines.
+                        Open-source modern data lakehouse built with Apache Iceberg, Trino, dbt, Apache Airflow, and MinIO.
+                        Demonstrates a production-grade data platform with orchestrated ELT pipelines, object storage,
+                        and a distributed SQL query engine — all containerized with Docker Compose.
                     </p>
                     <div class="tech-tags">
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">SQL Server</span>
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Healthcare Data</span>
+                        <span class="tech-tag">Apache Iceberg</span>
+                        <span class="tech-tag">Trino</span>
+                        <span class="tech-tag">dbt</span>
+                        <span class="tech-tag">Airflow</span>
+                        <span class="tech-tag">MinIO</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sugaan/lakehouse" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Flatfile Enterprise Data Integration</h3>
+                    <h3>📈 NSE Analytics</h3>
                     <p class="project-description">
-                        Implemented enterprise data integration platform with custom validation rules, data transformation logic, 
-                        and ETL pipeline architecture. Streamlined data onboarding for multiple healthcare clients.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Flatfile</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">REST APIs</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Stock Market Analysis & Portfolio Manager</h3>
-                    <p class="project-description">
-                        Financial analysis platform for portfolio management combining real-time stock data, technical indicators, 
-                        and custom analytics. Automated data collection and visualization for investment decision-making.
+                        Financial data ETL platform for NSE (National Stock Exchange) market data. Automates data collection,
+                        processing, and analysis of Indian stock market data with custom analytics and visualization —
+                        combining data engineering expertise with financial market insights.
                     </p>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Financial APIs</span>
+                        <span class="tech-tag">NSE APIs</span>
+                        <span class="tech-tag">ETL</span>
                         <span class="tech-tag">Data Visualization</span>
                     </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sugaan/nseanalytics" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Scalable ETL Data Pipeline</h3>
+                    <h3>☁️ Snowflake + Kafka Data Platform (IMMO)</h3>
                     <p class="project-description">
-                        Architected and deployed cloud-based ETL pipelines for processing healthcare data with automated quality 
-                        checks, error handling, and monitoring. Achieved 99.9% uptime with comprehensive logging.
+                        Engineered Snowflake from the ground up using Terraform modules. Built a full Kafka/MSK streaming
+                        architecture with connectors to Snowflake, formulated data contracts, and managed Kafka topic
+                        creation and access control for a Series B UK real-estate scale-up.
                     </p>
                     <div class="tech-tags">
+                        <span class="tech-tag">Snowflake</span>
+                        <span class="tech-tag">Kafka/MSK</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Data Mesh</span>
                         <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🏥 Reveleer Healthcare Data Pipeline</h3>
+                    <p class="project-description">
+                        Designed and implemented scalable ETL/ELT pipelines for healthcare big data at Reveleer using DBT,
+                        Apache Airflow, and Snowflake. Powers near-real-time data marts with Snowflake Streams, Tasks,
+                        and Materialized Views integrated with Tableau for stakeholder reporting.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">DBT</span>
+                        <span class="tech-tag">Airflow</span>
+                        <span class="tech-tag">Snowflake</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>⚡ Oracle Batch Performance Tuning</h3>
+                    <p class="project-description">
+                        Achieved a landmark performance optimization at TCS (client: IKEA Sweden) — tuned an Oracle
+                        batch process from a 7-day runtime down to 20 hours, a 91% reduction. Deep expertise in
+                        PL/SQL, query optimization, and large-scale batch architecture.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Oracle</span>
+                        <span class="tech-tag">PL/SQL</span>
+                        <span class="tech-tag">Performance Tuning</span>
+                        <span class="tech-tag">IKEA</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>💰 Snowflake Cost Optimization</h3>
+                    <p class="project-description">
+                        Streamlined Snowflake operational costs through warehouse right-sizing, clustering key design,
+                        query profile analysis, and intelligent use of Snowflake-native features to reduce compute spend
+                        while maintaining SLA performance for analytics teams.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Snowflake</span>
+                        <span class="tech-tag">Cost Optimization</span>
                         <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Data Quality</span>
+                        <span class="tech-tag">Data Engineering</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>Data Analytics Dashboard (Superset)</h3>
-                    <p class="project-description">
-                        Built interactive business intelligence dashboards using Apache Superset for real-time data visualization, 
-                        KPI tracking, and executive reporting across multiple data sources.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Superset</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Data Viz</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>AI-Powered Data Agent</h3>
-                    <p class="project-description">
-                        Developed AI agent using LangChain and Perplexity API for automated data analysis, natural language 
-                        querying, and intelligent insights generation from complex datasets.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">AI/ML</span>
-                        <span class="tech-tag">Perplexity API</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -728,37 +713,146 @@
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="timeline">
+
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Data Platform Team Lead</h3>
-                        <h4>Reveleer | Senior Data Engineer</h4>
-                        <p>
-                            Leading data platform initiatives, architecting scalable data pipelines, and mentoring engineering teams. 
-                            Responsible for HEDIS compliance systems, Flatfile integration, and enterprise data quality frameworks.
-                        </p>
+                        <span class="period">Mar 2025 – Present</span>
+                        <h3>Lead Data Integration Engineer</h3>
+                        <h4>Reveleer Digital Solutions India Pvt. Ltd., Chennai</h4>
+                        <p class="company">AI-powered healthcare technology company — value-based care workflows, data & analytics</p>
+                        <ul>
+                            <li>Designed scalable ETL/ELT pipelines using DBT, Apache Airflow, and Snowflake with IaC principles</li>
+                            <li>Utilized Snowflake Streams, Tasks, and Materialized Views for near-real-time data marts</li>
+                            <li>Established data modeling standards and CI/CD pipelines using GitHub Actions for DBT transformations</li>
+                            <li>Integrated pipelines with Tableau for actionable business stakeholder insights</li>
+                            <li>Collaborated cross-functionally using Agile and TDD practices</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Data Engineer</h3>
-                        <h4>Previous Role</h4>
-                        <p>
-                            Built ETL pipelines, implemented data warehousing solutions, and developed full-stack applications 
-                            for data integration. Worked extensively with SQL Server, PostgreSQL, and cloud platforms.
-                        </p>
+                        <span class="period">Feb 2024 – Feb 2025</span>
+                        <h3>Team Lead, Data Platform</h3>
+                        <h4>IMMO Digital Solutions India Pvt. Ltd., Chennai</h4>
+                        <p class="company">UK-based Series B scale-up — next-gen residential real estate portfolios, 100+ global team</p>
+                        <ul>
+                            <li>Led a team of 6 Senior Software Engineers with pair programming, team sessions, and personal development</li>
+                            <li>Hands-on development: real-time event processing, infrastructure deployment, and SDK for engineering teams</li>
+                            <li>Owned the strategy and vision for data storage and exchange across the organization</li>
+                            <li>Central point of contact between engineering and analytics leadership</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Full-Stack Developer</h3>
-                        <h4>Early Career</h4>
-                        <p>
-                            Developed web applications using TypeScript, Node.js, and React. Focused on building scalable 
-                            backend systems, REST APIs, and database design for enterprise applications.
-                        </p>
+                        <span class="period">Apr 2023 – Feb 2024</span>
+                        <h3>Senior Data Engineer</h3>
+                        <h4>IMMO Digital Solutions India Pvt. Ltd., Chennai</h4>
+                        <ul>
+                            <li>Engineered data platform aligned with Data Mesh principles</li>
+                            <li>Built Snowflake from the ground up with Terraform modules</li>
+                            <li>Crafted Kafka/MSK streaming architecture and MSK connectors for Snowflake</li>
+                            <li>Formulated data contracts including Kafka topic creation and access control management</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="period">Mar 2022 – Mar 2023</span>
+                        <h3>Engineering Manager, Data Engineering</h3>
+                        <h4>BYJU'S (Think and Learn Pvt. Ltd.), Bengaluru</h4>
+                        <p class="company">India's leading edtech company — personalized online learning for students</p>
+                        <ul>
+                            <li>Defined and owned business metrics and OKRs for the data engineering org</li>
+                            <li>Authored system designs (HLD and LLD) and data models for new requirements</li>
+                            <li>Conducted 1:1s, skip-level 1:1s, team building, and managed technical debt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="period">Sep 2021 – Feb 2022</span>
+                        <h3>Senior Tech Lead</h3>
+                        <h4>BYJU'S (Think and Learn Pvt. Ltd.), Bengaluru</h4>
+                        <ul>
+                            <li>Identified solution designs and performed business analysis of client requirements</li>
+                            <li>Provided technical oversight to the development team</li>
+                            <li>Conducted code reviews, hired and trained technical personnel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="period">Nov 2011 – Aug 2021</span>
+                        <h3>Tech Lead</h3>
+                        <h4>Tata Consultancy Services (TCS) — Client: IKEA, Sweden</h4>
+                        <ul>
+                            <li>Designed and developed functionalities for CRC; progressed from junior to Team Lead over 10 years</li>
+                            <li>Tuned Oracle batch process from 7 days to 20 hours (91% performance improvement)</li>
+                            <li>Provided advanced technical support, mentored engineers, and collaborated across teams</li>
+                            <li>Worked closely with product and QA to deliver market-ready outcomes</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div>
+                        <p><strong>Data Mesh Architecture</strong> — Developed data contracts and streaming architecture for a platform rooted in Data Mesh concepts at IMMO Digital (Feb 2024)</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div>
+                        <p><strong>Snowflake Cost Reduction</strong> — Streamlined costs associated with Snowflake operations through query and warehouse optimization (Jun 2021)</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <p><strong>Oracle Batch: 7 days → 20 hours</strong> — Achieved a 91% performance improvement in Oracle batch processing for IKEA (Apr 2018)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <a href="https://www.credly.com/badges/fdd30a94-c1a4-4b8d-b7d6-2b8869945a61/linked_in?t=tabzsk" target="_blank" class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h3>Professional Certification</h3>
+                    <p>Verified credential on Credly — click to view the full badge and issuing organization</p>
+                    <span class="cert-verify"><i class="fas fa-external-link-alt"></i> Verify on Credly</span>
+                </a>
+                <div class="cert-card" style="cursor: default;">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Apache Airflow Certifications</h3>
+                    <p>3× certified in Apache Airflow — orchestration, DAG development, and advanced patterns</p>
+                    <span class="cert-verify" style="color: var(--accent-green);"><i class="fas fa-check-circle"></i> 3 Badges Earned</span>
                 </div>
             </div>
         </div>
@@ -769,57 +863,52 @@
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
             <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
-                Interested in collaborating or discussing data engineering, full-stack development, or stock market analysis? 
-                Feel free to reach out!
+                Open to discussing data engineering, cloud architecture, team leadership, or the Indian stock market.
+                Reach out — I'd love to connect!
             </p>
             <div class="social-links">
                 <a href="https://github.com/sugaan" class="social-link" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/sugaan" class="social-link" target="_blank" title="LinkedIn">
+                <a href="https://linkedin.com/in/sugaan-kandhasamy5b549aa3" class="social-link" target="_blank" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:sugaan@example.com" class="social-link" title="Email">
+                <a href="mailto:ksugaan@zohomail.in" class="social-link" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://twitter.com/sugaan" class="social-link" target="_blank" title="Twitter">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://www.credly.com/badges/fdd30a94-c1a4-4b8d-b7d6-2b8869945a61/linked_in" class="social-link" target="_blank" title="Credly">
+                    <i class="fas fa-award"></i>
                 </a>
             </div>
+            <p style="margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                📧 ksugaan@zohomail.in &nbsp;|&nbsp; 📞 +91 97896 34295 &nbsp;|&nbsp; 📍 Chennai, Tamil Nadu 600126
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Sugaan. Built with passion for data engineering and clean code.</p>
+            <p>&copy; 2026 Sugaan K. Built with passion for data engineering and clean code.</p>
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                Chennai, Tamil Nadu, India | <a href="mailto:sugaan@example.com" style="color: var(--primary-blue);">sugaan@example.com</a>
+                Chennai, Tamil Nadu, India &nbsp;|&nbsp;
+                <a href="mailto:ksugaan@zohomail.in" style="color: var(--primary-blue);">ksugaan@zohomail.in</a>
             </p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -828,8 +917,25 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.skill-card, .project-card, .timeline-item').forEach(el => {
+        document.querySelectorAll('.skill-card, .project-card, .timeline-item, .achievement-card, .cert-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Active nav link highlight on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = '#3b82f6';
+                }
+            });
         });
     </script>
 </body>
